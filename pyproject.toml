@@ -1,6 +1,6 @@
 [project]
 name = "zerocut"
-version = "0.1.3"
+version = "0.1.4"
 description = ""
 authors = [
     {name = "ZeroOneDeveloper",email = "me@zero0ne.dev"}

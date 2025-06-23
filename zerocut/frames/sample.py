@@ -6,7 +6,7 @@ from ..frame import Frame
 class SimpleWhiteFrame(Frame):
     def __init__(self):
         super().__init__(
-            frame_image=Image.open("./samples/white.png").convert("RGBA"),
+            frame_image=Image.open("zerocut/frames/samples/white.png").convert("RGBA"),
             positions=[
                 (64, 64), (64, 628), (64, 1192), (64, 1756)
             ],
@@ -18,7 +18,7 @@ class SimpleWhiteFrame(Frame):
 class SimpleBlackFrame(Frame):
     def __init__(self):
         super().__init__(
-            frame_image=Image.open("./samples/black.png").convert("RGBA"),
+            frame_image=Image.open("zerocut/frames/samples/black.png").convert("RGBA"),
             positions=[
                 (64, 64), (64, 628), (64, 1192), (64, 1756)
             ],
