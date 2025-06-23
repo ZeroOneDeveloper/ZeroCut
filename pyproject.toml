@@ -16,9 +16,7 @@ dependencies = [
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-packages = [
-  { include = "zerocut" }
+[tool.poetry]
+include = [
+    "zerocut/frames/samples/*.png"
 ]
-
-[tool.poetry.include]
-"zerocut/frames/samples/*.png" = {}
