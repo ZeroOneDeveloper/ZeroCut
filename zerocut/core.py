@@ -4,6 +4,7 @@ from typing import List
 
 from .frame import Frame
 
+
 def crop_and_fit(image, target_width, target_height):
     """Crop and resize an image to fit a target width and height while maintaining aspect ratio."""
     aspect_ratio = target_width / target_height
@@ -31,11 +32,10 @@ class LifeCut:
         self.images = images
         self.frame = frame
 
-
     def create(self) -> Image.Image:
         """Creates a LifeCut image with the provided images and frame."""
         for idx, pos in enumerate(self.frame.positions):
-            photo = self.images[idx].convert('RGB')
+            photo = self.images[idx].convert("RGB")
             fitted = crop_and_fit(photo, self.frame.width, self.frame.height)
             self.frame.frame_image.paste(fitted, pos, mask=fitted)
 
