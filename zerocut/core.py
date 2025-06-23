@@ -35,7 +35,7 @@ class LifeCut:
     def create(self) -> Image.Image:
         """Creates a LifeCut image with the provided images and frame."""
         for idx, pos in enumerate(self.frame.positions):
-            photo = self.images[idx].convert("RGB")
+            photo = self.images[idx].convert("RGBA")
             fitted = crop_and_fit(photo, self.frame.width, self.frame.height)
             self.frame.frame_image.paste(fitted, pos, mask=fitted)
 
